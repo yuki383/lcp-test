@@ -4,9 +4,6 @@ import { Component2 } from "./components/component2";
 import { Component3 } from "./components/component3";
 import { Component4 } from "./components/component4";
 import { Component5 } from "./components/component5";
-import { Component6 } from "./components/component6";
-import { Component7 } from "./components/component7";
-import { Component8 } from "./components/component8";
 
 const router = createBrowserRouter([
   {
@@ -33,18 +30,6 @@ const router = createBrowserRouter([
     path: "/five",
     Component: Component5,
   },
-  {
-    path: "/six",
-    Component: Component6
-  },
-  {
-    path: "/seven",
-    Component: Component7,
-  },
-  {
-    path: "/eight",
-    Component: Component8,
-  }
 ]);
 
 function Index() {
@@ -65,23 +50,12 @@ function Index() {
       <div>
         <Link to="/five">Five</Link>
       </div>
-      <div>
-        <Link to="/six">Six</Link>
-      </div>
-      <div>
-        <Link to="/seven">Seven</Link>
-      </div>
-      <div>
-        <Link to="/eight">Eight</Link>
-      </div>
     </div>
   );
 }
 
-const App  = () => {
-  return (
-    <RouterProvider router={router} />
-  );
-}
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
